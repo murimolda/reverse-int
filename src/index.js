@@ -1,6 +1,5 @@
-module.exports = function reverse (n) {
-    let stringN = String(n);
-    let reverseNumber = stringN.split("").reverse().join("");
-    reverseNumber = Number(reverseNumber);
+module.exports = function reverse(n) {
+    let stringN = n.toString().split("").reverse().join("");
+    let reverseNumber = parseFloat(stringN) * Math.sign(n);
     return reverseNumber;
 }
